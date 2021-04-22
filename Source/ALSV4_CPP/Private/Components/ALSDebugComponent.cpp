@@ -74,7 +74,7 @@ void UALSDebugComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 void UALSDebugComponent::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 	OwnerCharacter = Cast<AALSCharacter>(GetOwner());
 
 	if (OwnerCharacter)
