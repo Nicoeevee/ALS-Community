@@ -22,7 +22,7 @@ void UALSAnimNotifyFootstep::Notify(USkeletalMeshComponent* MeshComp, UAnimSeque
 	{
 		return;
 	}
-	
+
 	AActor* MeshOwner = MeshComp->GetOwner();
 	if (!MeshOwner)
 	{
@@ -65,7 +65,7 @@ void UALSAnimNotifyFootstep::Notify(USkeletalMeshComponent* MeshComp, UAnimSeque
 			}
 			else if (auto DefaultResult = HitFXRows.FindByPredicate([&](const FALSHitFX* Value)
 			{
-				return EPhysicalSurface::SurfaceType_Default == Value->SurfaceType;
+				return SurfaceType_Default == Value->SurfaceType;
 			}))
 			{
 				HitFX = *DefaultResult;

@@ -61,13 +61,13 @@ void AALSPlayerController::SetupDebugInputs()
 			UALSDebugComponent* DebugComp = Cast<UALSDebugComponent>(Comp);
 			if (InputComponent && DebugComp)
 			{
-				InputComponent->BindKey(FKey("Tab"), EInputEvent::IE_Pressed, DebugComp, &UALSDebugComponent::ToggleHud);
-				InputComponent->BindKey(FKey("V"), EInputEvent::IE_Pressed, DebugComp, &UALSDebugComponent::ToggleDebugView);
-				InputComponent->BindKey(FKey("T"), EInputEvent::IE_Pressed, DebugComp, &UALSDebugComponent::ToggleTraces);
-				InputComponent->BindKey(FKey("Y"), EInputEvent::IE_Pressed, DebugComp, &UALSDebugComponent::ToggleDebugShapes);
-				InputComponent->BindKey(FKey("U"), EInputEvent::IE_Pressed, DebugComp, &UALSDebugComponent::ToggleLayerColors);
-				InputComponent->BindKey(FKey("I"), EInputEvent::IE_Pressed, DebugComp, &UALSDebugComponent::ToggleCharacterInfo);
-				InputComponent->BindKey(FKey("Z"), EInputEvent::IE_Pressed, DebugComp, &UALSDebugComponent::ToggleSlomo);
+				InputComponent->BindKey(FKey("Tab"), IE_Pressed, DebugComp, &UALSDebugComponent::ToggleHud);
+				InputComponent->BindKey(FKey("V"), IE_Pressed, DebugComp, &UALSDebugComponent::ToggleDebugView);
+				InputComponent->BindKey(FKey("T"), IE_Pressed, DebugComp, &UALSDebugComponent::ToggleTraces);
+				InputComponent->BindKey(FKey("Y"), IE_Pressed, DebugComp, &UALSDebugComponent::ToggleDebugShapes);
+				InputComponent->BindKey(FKey("U"), IE_Pressed, DebugComp, &UALSDebugComponent::ToggleLayerColors);
+				InputComponent->BindKey(FKey("I"), IE_Pressed, DebugComp, &UALSDebugComponent::ToggleCharacterInfo);
+				InputComponent->BindKey(FKey("Z"), IE_Pressed, DebugComp, &UALSDebugComponent::ToggleSlomo);
 			}
 		}
 	}

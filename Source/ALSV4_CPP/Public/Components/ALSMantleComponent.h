@@ -32,7 +32,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "ALS|Mantle System")
 	void MantleStart(float MantleHeight, const FALSComponentAndTransform& MantleLedgeWS,
-	                EALSMantleType MantleType);
+	                 EALSMantleType MantleType);
 
 	UFUNCTION(BlueprintCallable, Category = "ALS|Mantle System")
 	void MantleUpdate(float BlendIn);

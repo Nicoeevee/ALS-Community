@@ -344,7 +344,7 @@ void UALSCharacterAnimInstance::SetFootLockOffsets(float DeltaSeconds, FVector& 
 	if (Character->GetCharacterMovement()->IsMovingOnGround())
 	{
 		RotationDifference = CharacterInformation.CharacterActorRotation - Character->GetCharacterMovement()->
-			GetLastUpdateRotation();
+		                                                                              GetLastUpdateRotation();
 		RotationDifference.Normalize();
 	}
 
@@ -704,7 +704,7 @@ float UALSCharacterAnimInstance::CalculateCrouchingPlayRate() const
 	// This value needs to be separate from the standing play rate to improve the blend from crocuh to stand while in motion.
 	return FMath::Clamp(
 		CharacterInformation.Speed / Config.AnimatedCrouchSpeed / Grounded.StrideBlend / GetOwningComponent()->
-		GetComponentScale().Z,
+		                                                                                 GetComponentScale().Z,
 		0.0f, 2.0f);
 }
 

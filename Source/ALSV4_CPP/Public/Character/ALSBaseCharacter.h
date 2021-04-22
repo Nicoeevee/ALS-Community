@@ -579,7 +579,7 @@ protected:
 
 	/** If player hits to the ground with an amount of velocity greater than specified value, switch to breakfall state */
 	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "ALS|Breakfall System", meta = (EditCondition =
-	        "bBreakfallOnLand"))
+		"bBreakfallOnLand"))
 	float BreakfallOnLandVelocity = 600.0f;
 
 	/** Ragdoll System */
@@ -590,7 +590,7 @@ protected:
 
 	/** If player hits to the ground with an amount of velocity greater than specified value, switch to ragdoll state */
 	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "ALS|Ragdoll System", meta = (EditCondition =
-	        "bRagdollOnLand"))
+		"bRagdollOnLand"))
 	float RagdollOnLandVelocity = 1000.0f;
 
 	UPROPERTY(BlueprintReadOnly, Category = "ALS|Ragdoll System")

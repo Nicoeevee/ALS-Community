@@ -20,16 +20,14 @@ UCLASS()
 class ALSV4_CPP_API UALSCharacterMovementComponent : public UCharacterMovementComponent
 {
 	GENERATED_UCLASS_BODY()
-
 	class FSavedMove_My : public FSavedMove_Character
 	{
 	public:
-
-		typedef FSavedMove_Character Super;
+		using Super = FSavedMove_Character;
 
 		virtual void Clear() override;
 		virtual uint8 GetCompressedFlags() const override;
-		virtual void SetMoveFor(ACharacter* Character, float InDeltaTime, FVector const& NewAccel,
+		virtual void SetMoveFor(ACharacter* Character, float InDeltaTime, const FVector& NewAccel,
 		                        class FNetworkPredictionData_Client_Character& ClientData) override;
 
 		// Walk Speed Update
@@ -41,7 +39,7 @@ class ALSV4_CPP_API UALSCharacterMovementComponent : public UCharacterMovementCo
 	public:
 		FNetworkPredictionData_Client_My(const UCharacterMovementComponent& ClientMovement);
 
-		typedef FNetworkPredictionData_Client_Character Super;
+		using Super = FNetworkPredictionData_Client_Character;
 
 		virtual FSavedMovePtr AllocateNewMove() override;
 	};
@@ -64,7 +62,7 @@ class ALSV4_CPP_API UALSCharacterMovementComponent : public UCharacterMovementCo
 
 	UPROPERTY(BlueprintReadOnly, Category = "ALS|Movement System")
 	FALSMovementSettings CurrentMovementSettings;
-	
+
 	// Set Movement Curve (Called in every instance)
 	float GetMappedSpeed() const;
 

@@ -122,8 +122,8 @@ private:
 	/** Foot IK */
 
 	void SetFootLocking(float DeltaSeconds, FName EnableFootIKCurve, FName FootLockCurve, FName IKFootBone,
-                          float& CurFootLockAlpha, bool& UseFootLockCurve,
-                          FVector& CurFootLockLoc, FRotator& CurFootLockRot);
+	                    float& CurFootLockAlpha, bool& UseFootLockCurve,
+	                    FVector& CurFootLockLoc, FRotator& CurFootLockRot);
 
 	void SetFootLockOffsets(float DeltaSeconds, FVector& LocalLoc, FRotator& LocalRot);
 
@@ -132,7 +132,7 @@ private:
 	void ResetIKOffsets(float DeltaSeconds);
 
 	void SetFootOffsets(float DeltaSeconds, FName EnableFootIKCurve, FName IKFootBone, FName RootBone,
-                          FVector& CurLocationTarget, FVector& CurLocationOffset, FRotator& CurRotationOffset);
+	                    FVector& CurLocationTarget, FVector& CurLocationOffset, FRotator& CurRotationOffset);
 
 	/** Grounded */
 
@@ -258,7 +258,7 @@ protected:
 
 	/** Rotate In Place */
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Configuration|Rotate In Place", Meta = (
-		    ShowOnlyInnerProperties))
+		ShowOnlyInnerProperties))
 	FALSAnimRotateInPlace RotateInPlace;
 
 	/** Configuration */

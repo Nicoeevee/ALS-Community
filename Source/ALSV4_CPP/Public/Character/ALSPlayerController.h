@@ -32,7 +32,7 @@ private:
 	void SetupCamera();
 
 	void SetupDebugInputs();
-	
+
 public:
 	/** Main character reference */
 	UPROPERTY(BlueprintReadOnly, Category = "ALS Player Controller")

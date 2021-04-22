@@ -110,7 +110,7 @@ uint8 UALSCharacterMovementComponent::FSavedMove_My::GetCompressedFlags() const
 }
 
 void UALSCharacterMovementComponent::FSavedMove_My::SetMoveFor(ACharacter* Character, float InDeltaTime,
-                                                               FVector const& NewAccel,
+                                                               const FVector& NewAccel,
                                                                class FNetworkPredictionData_Client_Character&
                                                                ClientData)
 {
