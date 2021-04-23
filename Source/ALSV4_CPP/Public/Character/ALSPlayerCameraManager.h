@@ -52,6 +52,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "ALS|Camera")
 	USkeletalMeshComponent* CameraBehavior = nullptr;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "ALS|Camera")
+	bool bBypassCameraBehavior;
+
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "ALS|Camera")
 	FVector RootLocation;

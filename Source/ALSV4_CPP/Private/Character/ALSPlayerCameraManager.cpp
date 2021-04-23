@@ -67,7 +67,11 @@ void AALSPlayerCameraManager::UpdateViewTargetInternal(FTViewTarget& OutVT, floa
 		FRotator OutRotation;
 		float OutFOV;
 
-		if (CustomCameraBehavior(DeltaTime, OutLocation, OutRotation, OutFOV))
+		if (bBypassCameraBehavior)
+		{
+			OutVT.Target->CalcCamera(DeltaTime, OutVT.POV);
+		}
+		else if (CustomCameraBehavior(DeltaTime, OutLocation, OutRotation, OutFOV))
 		{
 			OutVT.POV.Location = OutLocation;
 			OutVT.POV.Rotation = OutRotation;
